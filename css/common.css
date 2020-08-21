@@ -533,6 +533,7 @@ header {
     margin-right: 20px;
     position: relative;
     padding: 66px 26px 22px 26px;
+    border-radius: 10px;
 }
 .instructions__items-col h1 {
     font-weight: 600;
