@@ -526,6 +526,7 @@ header {
 }
 
 .instructions__items-col {
+    background: #fff;
     width: 32%;
     z-index: 2;
     box-shadow: 0px 0px 60px rgba(36, 152, 254, 0.26);
@@ -600,6 +601,9 @@ header {
     padding: 25px 73px 25px 37px;
     border: 1px solid #e0e0e0;
     border-radius: 10px;
+    position: relative;
+    z-index: 3;
+    background: #fff;
     display: flex;
 }
 
@@ -637,6 +641,76 @@ header {
 
 .partners__content img:last-child {
     margin-right: 0;
+}
+.tarif {
+    margin-top: 64px;
+}
+.tarif__content-mobileimg {
+    display: none;
+}
+.tarif__content {
+    display: flex;
+    padding-bottom: 41px;
+    padding-left: 215px;
+    padding-top: 32px;
+    padding-right: 47px;
+    background: url(../images/newtarifbg.png) center/100% no-repeat;
+}
+
+.tarif__content-button {
+    display: flex;
+    margin-left: 30px;
+}
+
+.tarif__content button {
+    cursor: pointer;
+    white-space: pre;
+    padding: 18px 50px;
+    background: #fff;
+    border-radius: 6px;
+    border: none;
+    font-size: 24px;
+    align-self: center;
+    line-height: 150%;
+    color: #0f4e85;
+    transition: background 0.1s linear;
+}
+
+.tarif__content button:hover {
+    background: #f0f0f0;
+}
+
+.tarif__content-name p {
+    font-size: 18px;
+    line-height: 100%;
+    color: #ffffff;
+}
+
+.tarif__content-name h1 {
+    line-height: 1;
+    margin: 5px 0 0 0;
+    font-weight: 900;
+    font-size: 64px;
+    color: #ffffff;
+}
+
+.tarif__content-description {
+    margin-left: 80px;
+    display: flex;
+    align-self: center;
+}
+
+.tarif__content-description img {
+    align-self: self-end;
+    margin-right: 20px;
+    margin-top: 12px;
+}
+
+.tarif__content-description p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    color: #ffffff;
 }
 
 /* End */
@@ -4257,9 +4331,9 @@ header {
     cursor: pointer;
     margin: 0px;
 }
-
+/* Spoiler */
 .page-account .section-six {
-    display: flex;
+    display: none;
 }
 
 .page-account .section-six .width-account {
@@ -4268,72 +4342,6 @@ header {
 
 .page-account .section-six .col-left {
     max-width: 516px;
-}
-
-.page-account .section-six .col-right {
-    flex: 1;
-    padding: 0 0 0 50px;
-}
-
-.page-account .section-six .col-right .warning {
-    background: #ffffff;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 4px rgba(255, 0, 0, 0.34);
-    padding: 30px;
-    color: #ff0000;
-    text-align: center;
-    border-radius: 6px;
-}
-
-.page-account .section-six .col-right .warning span {
-    display: block;
-    text-align: center;
-    font-size: 22px;
-    padding: 0 0 10px 0;
-}
-
-.page-account .section-six .col-right .amount {
-    border: 1px solid #d2dfea;
-    box-sizing: border-box;
-    box-shadow: 0px 0px 4px rgba(30, 114, 162, 0.14);
-    border-radius: 6px;
-    margin: 30px 0 0 0;
-    background: #fff;
-    padding: 30px;
-}
-
-.page-account .section-six .col-right .amount button {
-    padding: 18px;
-    width: 100%;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-    line-height: 100%;
-    text-align: center;
-    cursor: pointer;
-    justify-content: center;
-    border: 0px;
-    background: #faa338;
-    box-shadow: 0px 0px 14px rgba(11, 59, 101, 0.08);
-    border-radius: 12px;
-    color: #0b3b65;
-}
-
-.page-account .section-six .col-right .amount .am {
-    display: flex;
-    align-items: center;
-    margin: 0 0 20px 0;
-}
-
-.page-account .section-six .col-right .amount span {
-    font-size: 22px;
-    font-weight: bold;
-    margin: 0 10px;
-    border: 0px;
-    background: #fff;
-    width: auto;
-    color: #000;
 }
 
 .page-account .section-six .qr-cod {
@@ -6182,7 +6190,346 @@ input:focus {
     margin: 0 11px;
 }
 
+/* Tarif Cards */
+.tarifs__content {
+    display: flex;
+}
+.tarifs__content-item {
+    width: 300px;
+    padding-right: 17px;
+    padding-top: 112px;
+    padding-bottom: 30px;
+    padding-left: 17px;
+    margin-right: 45px;
+}
+
+.tarifs__content-item h2 {
+    font-size: 18px;
+    line-height: 100%;
+    margin: 0;
+    color: #ffffff;
+}
+
+.tarifs__content-item h1 {
+    margin-top: 5px;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 100%;
+    color: #ffffff;
+}
+
+.tarifs__content-item p {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    color: #ffffff;
+    margin-top: 11px;
+}
+
+.tarifs__button {
+    padding: 0 17px;
+}
+
+.tarifs__content-item button {
+    cursor: pointer;
+    margin-top: 21px;
+    width: 100%;
+    padding: 15px 50px;
+    background: transparent;
+    border: 1px solid #fff;
+    font-size: 18px;
+    color: #ffffff;
+    transition: color 0.1s linear, background 0.1s linear;
+}
+.tarifs__content-item button:hover {
+    color: #0b3b65;
+    background: #fff;
+}
+
+.tarifs__content-item:last-child {
+    margin-right: 0;
+}
+.tarifs__content .moneybox {
+    background: url(../images/tarifcard1.png) center/cover no-repeat;
+}
+.tarifs__content .holder {
+    background: url(../images/tarifcard2.png) center/cover no-repeat;
+}
+.section-six {
+    margin-top: 45px;
+}
+.section-six .col-right {
+    padding: 30px;
+    max-width: 380px;
+    border: 1px solid #d2dfea;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(30, 114, 162, 0.14);
+    border-radius: 6px;
+    background: #fff;
+    margin: 0 0 0 50px;
+}
+
+.section-six .name-all-account {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    color: #0b3b65;
+    margin: 7px 0 31px 0;
+}
+
+.section-six .col-right button {
+    padding: 17px 47px;
+    background: linear-gradient(90deg, #ffd364 0%, #faa136 100%);
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 150%;
+    color: #0b3b65;
+    border: 0px;
+    cursor: pointer;
+    margin: 0px;
+    width: 100%;
+}
+
+/* Deposit cards */
+.deposit {
+    margin-top: 67px;
+}
+.deposit-container {
+    margin: 0 20px;
+    position: relative;
+    padding: 0 55px;
+}
+.wrapper {
+    padding: 21px 25px 40px 25px;
+}
+.depositcards__content {
+    display: flex !important;
+    justify-content: center;
+}
+.depositcards__content-item {
+    border: 2px solid #d2dfea;
+    border-radius: 20px;
+    max-width: 420px;
+}
+.deposit-title {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding-bottom: 15px;
+    max-width: 100%;
+    border-bottom: 1px solid #d2dfea;
+}
+
+.deposit-name p {
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #0b3b65;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.deposit-name h1 {
+    background: #f5f5f5;
+    border-radius: 12.5px;
+    padding: 8px 30px;
+    margin: 9px 0 0 0;
+    font-size: 18px;
+    color: #63809a;
+    font-weight: 400;
+    line-height: 120%;
+}
+.timewrapper {
+    width: 95px;
+}
+
+.timewrapper h1 {
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1;
+    color: #63809a;
+    font-weight: 400;
+    font-size: 15px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #d2dfea;
+}
+.deposit-date {
+    margin-top: 6px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: right;
+    color: #0b3b65;
+}
+.deposit-time {
+    margin-top: 7px;
+    background: #f5f5f5;
+    color: #0b3b65;
+    font-size: 14px;
+    border-radius: 12.5px;
+    padding: 6px 4px;
+    text-align: center;
+    margin-left: 5px;
+}
+.deposit-amount {
+    padding: 15px 30px;
+    margin-top: 41px;
+    background: #d2dfea;
+    border: 1px solid #c1d5e6;
+    border-radius: 5px;
+}
+.deposit-amount h1 {
+    text-transform: uppercase;
+    color: #63809a;
+    font-size: 17px;
+    line-height: 1;
+    margin: 0;
+    font-weight: 400;
+}
+.deposit-amount hr {
+    margin: 9px 0;
+    border: 0.5px solid #fff;
+    background-color: #fff;
+}
+.deposit-amount p {
+    color: #0b3b65;
+    font-size: 17px;
+}
+.deposit-button {
+    margin-top: 58px;
+}
+.deposit-button button {
+    padding-right: 27px;
+    color: #0b3b65;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    border: none;
+    background: linear-gradient(90deg, #ffd364 0%, #faa136 100%);
+    border-radius: 6px;
+}
+.deposit-button button img {
+    border-right: 1px solid #f7931a;
+    padding: 11px 10px 11px 21px;
+    margin-right: 16px;
+}
+.deposit-warn {
+    border-top: 1px solid #c1d5e6;
+    padding: 18px 40px;
+}
+
+.deposit-warn p {
+    color: #7692ab;
+    font-size: 15px;
+    font-style: italic;
+}
+
+/* Deposit slider */
+.depositcards__content.slick-slider {
+    position: unset;
+}
+.depositcards__content .slick-slide {
+    margin: 0 22.5px;
+}
+.depositcards__content .slick-list {
+    overflow: hidden;
+}
+.depositcards__content .slick-track {
+    display: flex;
+}
+
+.depositcards__content .slick-arrow {
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    position: absolute;
+    display: block;
+    width: 34px;
+    height: 34px;
+    font-size: 0;
+    border: none;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0px 4px 16px rgba(11, 59, 101, 0.3);
+}
+
+.depositcards__content .slick-arrow.slick-prev {
+    left: 0;
+}
+.depositcards__content .slick-arrow.slick-prev:before,
+.depositcards__content .slick-arrow.slick-prev:after {
+    left: 45%;
+    content: "";
+    position: absolute;
+    background-color: #88a0b5;
+    width: 8px;
+    height: 2px;
+}
+
+.depositcards__content .slick-arrow.slick-prev:before {
+    top: 10.5px;
+    transform: rotate(-45deg) translateX(-50%);
+}
+
+.depositcards__content .slick-arrow.slick-prev:after {
+    bottom: 10.5px;
+    transform: rotate(45deg) translateX(-50%);
+}
+
+/* Стрелка вправо */
+.depositcards__content .slick-arrow.slick-next {
+    right: 0;
+}
+
+.depositcards__content .slick-arrow.slick-next:before,
+.depositcards__content .slick-arrow.slick-next:after {
+    content: "";
+    position: absolute;
+    background-color: #88a0b5;
+    width: 8px;
+    height: 2px;
+}
+
+.depositcards__content .slick-arrow.slick-next:before {
+    top: 16px;
+    transform: rotate(45deg) translateX(-50%);
+}
+
+.depositcards__content .slick-arrow.slick-next:after {
+    bottom: 16px;
+    transform: rotate(-45deg) translateX(-50%);
+}
+
+@media screen and (max-width: 1700px) {
+    .deposit-name h1 {
+        text-align: center;
+        font-size: 14px;
+    }
+    .timewrapper h1 {
+        text-align: center;
+        font-size: 14px;
+    }
+    .deposit-date,
+    .deposit-time {
+        font-size: 13px;
+    }
+}
 @media screen and (max-width: 1500px) {
+    .deposit-title {
+        flex-direction: column;
+    }
+    .deposit-name p {
+        margin-top: 5px;
+    }
+    .deposit-name p,
+    .deposit-date {
+        text-align: center;
+    }
+    .timewrapper h1 {
+        margin-top: 5px;
+    }
     .section-15 .site-width:before {
         left: 100px;
     }
@@ -6194,6 +6541,9 @@ input:focus {
 }
 
 @media screen and (max-width: 1450px) {
+    .deposit-amount p {
+        font-size: 16px;
+    }
     .width-account {
         padding: 0 20px;
     }
@@ -6208,6 +6558,9 @@ input:focus {
 }
 
 @media screen and (max-width: 1300px) {
+    .circles {
+        display: none;
+    }
     .page-account .head-account .menu li {
         margin: 0 20px 0 0;
     }
@@ -6281,6 +6634,33 @@ input:focus {
 }
 
 @media screen and (max-width: 1100px) {
+    .deposit-container .slick-slide {
+        text-align: center;
+    }
+    .deposit-button,
+    .deposit-amount {
+        margin-top: 20px;
+    }
+    .wrapper {
+        padding: 20px;
+    }
+    .tarif__content-description {
+        margin-left: 50px;
+    }
+    .tarif__content button {
+        padding: 18px 30px;
+    }
+    .tarif__content {
+        padding-left: 170px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .tarif__content-name {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .header .menu li {
         padding: 0 10px;
     }
@@ -6314,6 +6694,25 @@ input:focus {
 }
 
 @media screen and (max-width: 1000px) {
+    .section-six .col-right {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .tarif__content {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .tarif__content button {
+        font-size: 20px;
+    }
+    .tarif__content-description p {
+        font-size: 16px;
+    }
+    .tarif__content-name h1 {
+        font-size: 50px;
+    }
     .instructions__bg,
     .buy__bgelement {
         display: none;
@@ -7517,7 +7916,31 @@ input:focus {
     }
 }
 
+@media screen and (max-width: 910px) {
+    .tarif__content button {
+        font-size: 18px;
+    }
+    .tarif__content-description {
+        margin-left: 40px;
+    }
+    .tarif__content {
+        padding-left: 140px;
+    }
+}
+
 @media screen and (max-width: 860px) {
+    .tarif__content button {
+        padding: 12px 25px;
+    }
+    .tarif__content {
+        background: url(../images/newtarifbglaptop.png) center/100% no-repeat;
+    }
+    .tarif__content-description p {
+        font-size: 14px;
+    }
+    .tarif__content {
+        padding-left: 60px;
+    }
     .buy__content {
         flex-direction: column;
     }
@@ -7536,7 +7959,7 @@ input:focus {
 
     .instructions__items-col {
         width: 100%;
-        margin: 40px 0;
+        margin: 25px 0;
         box-shadow: 0px 0px 50px rgba(36, 152, 254, 0.26);
     }
 
@@ -7561,7 +7984,45 @@ input:focus {
     }
 }
 
-@media screen and (max-width: 767.98px) {
+@media screen and (max-width: 768px) {
+    .tarifs__content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .tarifs__content-item:first-child {
+        margin-top: 0;
+    }
+    .tarifs__content-item {
+        margin-right: 0;
+        margin-top: 40px;
+    }
+    .tarif__content-mobileimg {
+        display: block;
+        position: absolute;
+        left: 1px;
+        top: 0;
+    }
+    .tarif__content {
+        align-items: center;
+        position: relative;
+        background: url(../images/newtarifbglaptop.png) center/cover no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 15px;
+    }
+    .tarif__content-description img {
+        margin-top: 0;
+    }
+    .tarif__content-description {
+        margin-left: 0;
+        margin-top: 5px;
+        align-items: center;
+    }
+    .tarif__content-button {
+        margin-left: 0;
+        margin-top: 10px;
+    }
     .buy__text-content {
         width: auto;
     }
@@ -7618,8 +8079,43 @@ input:focus {
         padding: 15px 27px 15px 27px;
     }
 }
+@media screen and (max-width: 568px) {
+    .deposit-container .slick-slide {
+        margin: 0;
+    }
+    .deposit-container {
+        margin: 0 10px;
+        padding: 0 10px;
+    }
+    .tarif__content-name h1 {
+        font-size: 64px;
+    }
+    .tarif__content-description p {
+        font-size: 18px;
+    }
 
-@media screen and (max-width: 567.98px) {
+    .tarif__content-description img {
+        display: none;
+    }
+    .tarif__content-description {
+        margin-top: 21px;
+        align-self: self-start;
+    }
+    .tarif__content-button {
+        width: 100%;
+        margin-top: 60px;
+        font-size: 24px;
+    }
+    .tarif__content-button button {
+        width: 100%;
+    }
+    .tarif__content {
+        background: url(../images/newtarifbgmobile.png) center/100% no-repeat;
+        padding-left: 23px;
+        padding-right: 23px;
+        padding-top: 130px;
+        align-items: start;
+    }
     .buy__image {
         margin-left: 0;
     }
