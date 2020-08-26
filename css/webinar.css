@@ -206,7 +206,6 @@ ul li {
 }
 
 .pastweb__items {
-	display: flex !important;
 	margin-top: 32px;
 }
 
@@ -320,6 +319,9 @@ ul li {
 	position: unset !important;
 }
 
+.slick-list {
+	overflow: unset !important;
+}
 .pastweb .slick-slide {
 	opacity: 0;
 	transition: opacity 0.2s linear;
@@ -328,14 +330,9 @@ ul li {
 .pastweb .slick-slide.slick-active {
 	opacity: 1;
 }
-
-.pastweb .slick-list {
-	overflow: unset;
-}
 .pastweb .slick-track {
 	padding-top: 30px;
 	padding-bottom: 59px;
-	display: flex;
 }
 .pastweb .slick-slide {
 	margin: 0 10px;
@@ -446,26 +443,13 @@ ul li {
 }
 
 @media screen and (max-width: 992px) {
-	.pastweb .slick-slide {
-		margin: 0;
-	}
-	.pastweb__items {
-		margin-top: 0;
-	}
 	.col-left {
-		-webkit-border-radius: 10px;
-		-moz-border-radius: 10px;
-		border-radius: 10px;
+		order: 2;
 		overflow: hidden;
 	}
 	.col-right {
-		-webkit-border-radius: 10px;
-		-moz-border-radius: 10px;
-		border-radius: 10px;
+		order: 1;
 		overflow: hidden;
-	}
-	.pastweb__content-item {
-		margin-right: 0;
 	}
 	.webinar-img {
 		padding-bottom: 70px;
@@ -487,7 +471,6 @@ ul li {
 	}
 	.webinar__content .col-right {
 		max-width: unset;
-		margin-top: 40px;
 		width: 100%;
 	}
 
@@ -498,14 +481,6 @@ ul li {
 	.webinar,
 	.preparations {
 		margin-top: 60px;
-	}
-	.pastweb__items {
-		flex-direction: column;
-		align-items: center;
-	}
-
-	.pastweb__content-item {
-		margin-top: 35px;
 	}
 }
 
@@ -552,6 +527,9 @@ ul li {
 }
 
 @media screen and (max-width: 410px) {
+	.pastweb .slick-slide {
+		margin: 0 5px;
+	}
 	.col-right .share {
 		flex-direction: column;
 		justify-content: center;
@@ -560,10 +538,6 @@ ul li {
 	.col-right .share p {
 		margin-right: 0;
 		margin-bottom: 10px;
-	}
-
-	.pastweb__content-item {
-		width: auto;
 	}
 
 	.item__footer {
