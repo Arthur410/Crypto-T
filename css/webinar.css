@@ -53,6 +53,7 @@ ul li {
 }
 
 .webinar-img {
+	display: block;
 	height: 100%;
 	padding-bottom: 56px;
 	position: relative;
@@ -267,11 +268,17 @@ ul li {
 }
 
 .item__vid .play {
+	display: block;
 	cursor: pointer;
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+	transition: transform 0.1s linear;
+}
+
+.item__vid .play:hover {
+	transform: translate(-50%, -50%) scale(1.1);
 }
 
 .item__footer {
