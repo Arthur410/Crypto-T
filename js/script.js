@@ -234,10 +234,23 @@ $(document).ready(function () {
   })
 
   // Webinar slider
-  $('.pastweb__slider').slick({
-    slidesToShow: 1,
+  $('.pastweb__items').slick({
+    slidesToShow: 3,
     dots: true,
-    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        }
+      },
+    ]
   })
 });
 
