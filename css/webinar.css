@@ -61,8 +61,10 @@ ul li {
 .webinar-img img {
 	height: 100%;
 }
-
-.col-left ul {
+.col-left .share {
+	display: none;
+}
+.webinar-time {
 	width: 100%;
 	justify-content: center;
 	position: absolute;
@@ -74,36 +76,36 @@ ul li {
 	background: #ffd364;
 }
 
-.col-left ul li {
+.webinar-time li {
 	padding-top: 22px;
 	padding-bottom: 22px;
 	border-right: 1px solid #fff;
 }
 
-.col-left ul li img {
+.webinar-time li img {
 	margin-right: 6px;
 }
 
-.col-left ul li:nth-child(1) {
+.webinar-time li:nth-child(1) {
 	padding-right: 34px;
 }
-.col-left ul li:nth-child(2) {
+.webinar-time li:nth-child(2) {
 	padding-right: 37px;
 	padding-left: 49px;
 }
-.col-left ul li:nth-child(3) {
+.webinar-time li:nth-child(3) {
 	padding-right: 47px;
 	padding-left: 46px;
 }
-.col-left ul li:nth-child(4) {
+.webinar-time li:nth-child(4) {
 	padding-left: 41px;
 }
 
-.col-left ul li:last-child {
+.webinar-time li:last-child {
 	border-right: none;
 }
 
-.col-left ul li p {
+.webinar-time li p {
 	display: flex;
 	align-items: center;
 	font-size: 14px;
@@ -425,16 +427,16 @@ ul li {
 		width: 500px;
 	}
 
-	.col-left ul li {
+	.webinar-time li {
 		display: flex;
 		align-items: center;
 		padding-top: 25px;
 		padding-bottom: 29px;
 	}
-	.col-left ul li p {
+	.webinar-time li p {
 		text-align: center;
 	}
-	.col-left ul li img {
+	.webinar-time li img {
 		display: none;
 	}
 }
@@ -443,6 +445,34 @@ ul li {
 }
 
 @media screen and (max-width: 992px) {
+	.col-right .share {
+		display: none;
+	}
+	.webinar-img {
+		padding-bottom: 116px;
+	}
+	.webinar-time {
+		bottom: 60px;
+	}
+	.col-left .share {
+		width: 100%;
+		align-items: center;
+		display: flex;
+		background: #d2dfea;
+		padding: 18px 24px 18px 32px;
+	}
+
+	.col-left .share p {
+		font-weight: 600;
+		margin-right: 10px;
+		font-size: 14px;
+		line-height: 17px;
+		color: #0e0f1a;
+	}
+	.share {
+		position: absolute;
+		bottom: 0;
+	}
 	.col-left {
 		order: 2;
 		overflow: hidden;
@@ -450,9 +480,6 @@ ul li {
 	.col-right {
 		order: 1;
 		overflow: hidden;
-	}
-	.webinar-img {
-		padding-bottom: 70px;
 	}
 	.pastweb .slick-arrow.slick-prev {
 		right: 75px;
@@ -485,57 +512,85 @@ ul li {
 }
 
 @media screen and (max-width: 640px) {
-	.col-left ul li p {
+	.webinar-time li p {
 		font-size: 13px;
 	}
-	.col-left ul li:nth-child(1) {
+	.webinar-time li:nth-child(1) {
 		padding-right: 20px;
 	}
-	.col-left ul li:nth-child(2) {
+	.webinar-time li:nth-child(2) {
 		padding-right: 25px;
 		padding-left: 30px;
 	}
-	.col-left ul li:nth-child(3) {
+	.webinar-time li:nth-child(3) {
 		padding-right: 30px;
 		padding-left: 35px;
 	}
-	.col-left ul li:nth-child(4) {
+	.webinar-time li:nth-child(4) {
 		padding-left: 30px;
 	}
 }
 
 @media screen and (max-width: 585px) {
+	.webinar-time {
+		bottom: 60px;
+	}
 	.webinar-img {
-		padding-bottom: 184px;
+		padding-bottom: 246px;
+	}
+	.col-left .share {
+		width: 100%;
+		align-items: center;
+		display: flex;
+		background: #d2dfea;
+		padding: 18px 24px 18px 32px;
+	}
+
+	.col-left .share p {
+		font-weight: 600;
+		margin-right: 10px;
+		font-size: 14px;
+		line-height: 17px;
+		color: #0e0f1a;
+	}
+	.share {
+		position: absolute;
+		bottom: 0;
 	}
 	.partners__content img:last-child {
 		margin-right: 0;
 	}
-	.col-left ul {
+	.webinar-time {
 		flex-direction: column;
 	}
 
-	.col-left ul li {
+	.webinar-time li {
 		border-bottom: 1px solid #fff;
 		border-right: 0;
 		padding: 15px 0 !important;
 	}
 
-	.col-left ul li:last-child {
+	.webinar-time li:last-child {
 		border-bottom: 0;
 	}
 }
 
 @media screen and (max-width: 410px) {
+	.webinar-time {
+		bottom: 87px;
+	}
+	.webinar-img {
+		padding-bottom: 274px;
+	}
 	.pastweb .slick-slide {
 		margin: 0 5px;
 	}
-	.col-right .share {
+	.col-left .share {
 		flex-direction: column;
 		justify-content: center;
 	}
 
-	.col-right .share p {
+	.col-left .share p {
 		margin-right: 0;
 		margin-bottom: 10px;
 	}
@@ -555,12 +610,12 @@ ul li {
 	.col-right .webinar__desc {
 		padding: 26px 18px 31px 25px;
 	}
-	.col-left ul {
+	.webinar-time {
 		padding-left: 25px;
 		padding-right: 25px;
 	}
 
-	.col-right .share {
+	.col-left .share {
 		padding: 18px 10px 18px 10px;
 	}
 
