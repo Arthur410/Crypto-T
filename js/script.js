@@ -233,6 +233,12 @@ $(document).ready(function () {
     ]
   })
 
+  // Webinar slider
+  $('.pastweb__slider').slick({
+    slidesToShow: 1,
+    dots: true,
+    infinite: true,
+  })
 });
 
 
